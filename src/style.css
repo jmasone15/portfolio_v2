@@ -7,11 +7,72 @@
 .App {
     position: absolute;
     top: 35%;
-    left: 35%;
+    left: 29%;
     margin: auto;
     text-align: center;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .fade {
     opacity: 0;
+}
+.dropdown {
+    z-index: 1;
+    background-color: rgb(44, 42, 42);
+}
+
+.first-drop {
+    text-align: center;
+    margin:150px;
+    background-color: rgb(44, 42, 42);
+}
+.second-drop {
+    text-align: center;
+    margin:150px;
+    background-color: rgb(44, 42, 42);
+}
+.third-drop {
+    text-align: center;
+    margin:150px;
+    background-color: rgb(44, 42, 42);
+}
+.fourth-drop {
+    text-align: center;
+    margin:157px;
+    background-color: rgb(44, 42, 42);
+}
+
+.first-drop-text:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+.second-drop-text:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+.third-drop-text:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+.fourth-drop-text:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.first-drop-text {
+    cursor: pointer;
+    background-color: rgb(44, 42, 42);
+}
+.second-drop-text {
+    cursor: pointer;
+    background-color: rgb(44, 42, 42);
+}
+.third-drop-text {
+    cursor: pointer;
+    background-color: rgb(44, 42, 42);
+}
+.fourth-drop-text {
+    cursor: pointer;
+    background-color: rgb(44, 42, 42);
 }

@@ -30,12 +30,12 @@ export default function Header({ setAniDone }) {
                     <Typist.Backspace count={20} delay={500} />
                     <Typist.Delay ms={500} /> <u>Back End Developer</u>
                     <Typist.Backspace count={19} delay={500} />
-                    <Typist.Delay ms={500} /> <a href="https://github.com/jmasone15">Full Stack Developer</a>
+                    <Typist.Delay ms={500} /> <a style={{ color: "inherit" }} href="https://github.com/jmasone15">Full Stack Developer</a>
                 </h1>
             </Typist>
             <div id="fade" className="fade">
                 <h3>Check out my projects page to see my latest projects.</h3>
-                <h3>Contact me for inquiries at: <a target="_blank" rel="noreferrer" href="mailto:jordanmasone1@gmail.com?subject = Full Stack Developer Inquiry">jordanmasone1@gmail.com</a></h3>
+                <h3>Contact me for inquiries at: <a style={{ color: "inherit" }} target="_blank" rel="noreferrer" href="mailto:jordanmasone1@gmail.com?subject = Full Stack Developer Inquiry">jordanmasone1@gmail.com</a></h3>
             </div>
         </>
     )
