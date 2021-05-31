@@ -3,7 +3,7 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
-.App {
+.header {
     position: absolute;
     top: 35%;
     left: 28%;
@@ -13,6 +13,22 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+.p-header {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+.p-body {
+    position: absolute;
+    top: 11%;
+    left: 5%;
+    margin: auto;
+    color: #caf0f8;
+}
 .fade {
     opacity: 0;
 }

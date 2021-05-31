@@ -21,7 +21,7 @@ export default function Navs() {
                     <h1 className="first-drop-text">home</h1>
                 </div>
                 <div className="second-drop" onClick={(e) => changePage(e, "/projects")}>
-                    <h1 className="second-drop-text">portfolio</h1>
+                    <h1 className="second-drop-text">projects</h1>
                 </div>
                 <div className="third-drop" onClick={(e) => changePage(e, "/socials")}>
                     <h1 className="third-drop-text">socials</h1>
