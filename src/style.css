@@ -1,16 +1,15 @@
 * {
-    background-color: rgb(65, 63, 63);
-    color: white;
+    background-color: #5C5D67;
     font-family: 'Courier New', Courier, monospace;
 }
 
 .App {
     position: absolute;
     top: 35%;
-    left: 29%;
+    left: 28%;
     margin: auto;
     text-align: center;
-    color: white;
+    color: #caf0f8;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -19,28 +18,29 @@
 }
 .dropdown {
     z-index: 1;
-    background-color: rgb(44, 42, 42);
+    background-color: #6c757d;
+    color: white;
 }
 
 .first-drop {
     text-align: center;
     margin:150px;
-    background-color: rgb(44, 42, 42);
+    background-color: #6c757d;
 }
 .second-drop {
     text-align: center;
     margin:150px;
-    background-color: rgb(44, 42, 42);
+    background-color: #6c757d;
 }
 .third-drop {
     text-align: center;
     margin:150px;
-    background-color: rgb(44, 42, 42);
+    background-color: #6c757d;
 }
 .fourth-drop {
     text-align: center;
     margin:157px;
-    background-color: rgb(44, 42, 42);
+    background-color: #6c757d;
 }
 
 .first-drop-text:hover {
@@ -62,17 +62,23 @@
 
 .first-drop-text {
     cursor: pointer;
-    background-color: rgb(44, 42, 42);
+    background-color: #6c757d;
 }
 .second-drop-text {
     cursor: pointer;
-    background-color: rgb(44, 42, 42);
+    background-color: #6c757d;
 }
 .third-drop-text {
     cursor: pointer;
-    background-color: rgb(44, 42, 42);
+    background-color: #6c757d;
 }
 .fourth-drop-text {
     cursor: pointer;
-    background-color: rgb(44, 42, 42);
+    background-color: #6c757d;
+}
+
+.footer {
+    text-align: center;
+    justify-content: center;
+    color: #caf0f8;
 }
