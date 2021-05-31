@@ -1,0 +1,13 @@
+* {
+    background-color: rgb(65, 63, 63);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.App {
+    position: absolute;
+    top: 35%;
+    left: 33%;
+    margin: auto;
+    text-align: center;
+}
