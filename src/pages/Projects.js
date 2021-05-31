@@ -3,8 +3,22 @@ import Footer from '../components/Footer';
 import Navs from "../components/Navs";
 import "../style.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ProjectCard from '../components/ProjectCard';
 
 export default function Projects() {
+
+    const backgroundColors = [
+        "#FFADAD",
+        "#FFD6A5",
+        "#FDFFB6",
+        "#CAFFBF",
+        "#9BF6FF",
+        "#A0C4FF",
+        "#BDB2FF",
+        "#FFC6FF",
+        "#ffc8dd"
+    ]
+
     return (
         <>
             <Navs />
@@ -16,66 +30,19 @@ export default function Projects() {
             </div>
             <div className="p-container">
                 <div className="container">
-                    <div className="p-card">
-                        <div className="face face1">
-                            <div className="content">
-                                <div className="icon">
-                                    <i className="fa fa-linkedin-square" style={{ backgroundColor: "#e07768" }} aria-hidden="true">
-                                        <h2 style={{ backgroundColor: "#e07768" }}>Project Name</h2>
-                                    </i>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="face face2">
-                            <div className="content" style={{ backgroundColor: "#dee2ff" }}>
-                                <p style={{ backgroundColor: "#dee2ff" }}>blah blah blah blah blah blah blah blah blah blah</p>
-                                <br />
-                                <button>Project buttons</button>
-                                <button>Project buttons</button>
-                                <button>Project buttons</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="p-card">
-                        <div className="face face1">
-                            <div className="content">
-                                <div className="icon">
-                                    <i className="fa fa-linkedin-square" style={{ backgroundColor: "#6eadd4" }} aria-hidden="true">
-                                        <h2 style={{ backgroundColor: "#6eadd4" }}>Project Name</h2>
-                                    </i>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="face face2">
-                            <div className="content" style={{ backgroundColor: "#dee2ff" }}>
-                                <p style={{ backgroundColor: "#dee2ff" }}>blah blah blah blah blah blah blah blah blah blah</p>
-                                <br />
-                                <button>Project buttons</button>
-                                <button>Project buttons</button>
-                                <button>Project buttons</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="p-card">
-                        <div className="face face1">
-                            <div className="content">
-                                <div className="icon">
-                                    <i className="fa fa-linkedin-square" style={{ backgroundColor: "#4aada9" }} aria-hidden="true">
-                                        <h2 style={{ backgroundColor: "#4aada9" }}>Project Name</h2>
-                                    </i>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="face face2">
-                            <div className="content" style={{ backgroundColor: "#dee2ff" }}>
-                                <p style={{ backgroundColor: "#dee2ff" }}>blah blah blah blah blah blah blah blah blah blah</p>
-                                <br />
-                                <button>Project buttons</button>
-                                <button>Project buttons</button>
-                                <button>Project buttons</button>
-                            </div>
-                        </div>
-                    </div>
+                    <ProjectCard color={backgroundColors[0]} />
+                    <ProjectCard color={backgroundColors[1]} />
+                    <ProjectCard color={backgroundColors[2]} />
+                </div>
+                <div className="container">
+                    <ProjectCard color={backgroundColors[3]} />
+                    <ProjectCard color={backgroundColors[4]} />
+                    <ProjectCard color={backgroundColors[5]} />
+                </div>
+                <div className="container">
+                    <ProjectCard color={backgroundColors[6]} />
+                    <ProjectCard color={backgroundColors[7]} />
+                    <ProjectCard color={backgroundColors[8]} />
                 </div>
             </div >
             <Footer />
