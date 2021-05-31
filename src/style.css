@@ -7,7 +7,11 @@
 .App {
     position: absolute;
     top: 35%;
-    left: 33%;
+    left: 35%;
     margin: auto;
     text-align: center;
+}
+
+.fade {
+    opacity: 0;
 }
