@@ -1,14 +1,14 @@
 import React from 'react';
 import Button from "react-bootstrap/Button";
 
-export default function ProjectCard({ color, data }) {
+export default function ProjectCard({ color, data, num }) {
     return (
         <>
             <div className="p-card">
                 <div className="face face1">
                     <div className="content">
                         <div className="icon" style={{ backgroundColor: color }}>
-                            <i className="fa fa-linkedin-square" style={{ backgroundColor: color, position: "absolute", left: "130px" }} aria-hidden="true">
+                            <i className="fa fa-linkedin-square" style={{ backgroundColor: color, position: "absolute", left: num }} aria-hidden="true">
                                 <h2 style={{ backgroundColor: color, color: "black" }}>{data.name}</h2>
                             </i>
                         </div>

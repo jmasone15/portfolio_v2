@@ -9,7 +9,7 @@ const projects = [
     },
     {
         id: "$^6_rD^E%5bl0vSp^KRbaXdPj*q77B",
-        name: "Build-a-Date",
+        name: "Build a Date",
         img: "https://via.placeholder.com/175",
         description: "Date Night builder using vanilla JS with a node and SQL backend.",
         github: "https://github.com/jmasone15/build-a-date",
@@ -17,7 +17,7 @@ const projects = [
     },
     {
         id: "3XMqzOtg9jELmTQsP9nD3%GEmJd!!S",
-        name: "Leftover / Hangover",
+        name: "Leftover Hangover",
         img: "https://via.placeholder.com/175",
         description: "Fridge to table application using vanilla JS and multiple APIs.",
         github: "https://github.com/JRLaro/JJAM",
@@ -49,7 +49,7 @@ const projects = [
     },
     {
         id: "Z*^AYt0MFP0t*yaWvJv6Qws#CY3e0V",
-        name: "Password Generator V2",
+        name: "Password Generator",
         img: "../images/PassGen1.jpg",
         description: "This password generator built with react is perfect for anyone who has lots of passwords and wants to be protected.",
         github: "https://github.com/jmasone15/password_generator_v2",

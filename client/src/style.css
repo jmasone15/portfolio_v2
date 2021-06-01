@@ -38,6 +38,30 @@
     color: #64daf1;
 }
 
+.s-header {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+.s-body {
+    position: absolute;
+    top: 11%;
+    left: 5%;
+    margin: auto;
+    color: #6ed3e7;
+}
+
+.s-container {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    color: #64daf1;
+}
+
 .grid {
     color: rgb(245, 228, 228);
     background-color: rgba(0, 0, 0, 0.5);
@@ -139,32 +163,6 @@
     z-index: 1;
 }
 
-/* .container .p-card:nth-child(1) .icon {
-    background: #FFADAD;
-}
-.container .p-card:nth-child(2) .icon .icon-header {
-    background: #FFD6A5;
-}
-.container .p-card:nth-child(3) .icon .icon-header {
-    background: #FDFFB6;
-}
-.container .p-card:nth-child(4) .icon .icon-header {
-    background: #CAFFBF;
-}
-.container .p-card:nth-child(5) .icon .icon-header {
-    background: #9BF6FF;
-}
-.container .p-card:nth-child(6) .icon .icon-header {
-    background: #A0C4FF;
-}
-.container .p-card:nth-child(7) .icon .icon-header {
-    background: #BDB2FF;
-}
-.container .p-card:nth-child(8) .icon .icon-header {
-    background: #FFC6FF;
-} */
-
-
 .container .p-card .icon .fa {
     position: absolute;
     top: 50%;
@@ -219,12 +217,6 @@ i {
     max-width: 100px;
 }
 
-/* Background color */
-/* .content {
-    background-color: white;
-} */
-
-/* Background color */
 .container .p-card .face.face2 {
     position: relative;
     display: flex;
@@ -260,3 +252,9 @@ i {
     text-decoration: none;
     color: #414141;
 }
+
+.skills-font {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Verdana, Geneva, Tahoma, sans-serif */

@@ -33,7 +33,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/portoflioBacken
 
 // Routes
 app.use("/auth", require("./routes/userRoutes"));
-app.use("/thing", require("./routes/thingRoutes"));
 
 // Only use for heroku
 // app.get("*", function (req, res) {
