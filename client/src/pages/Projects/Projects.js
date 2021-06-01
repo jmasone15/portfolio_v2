@@ -1,9 +1,9 @@
 import React from 'react';
-import Footer from '../components/Footer';
-import Navs from "../components/Navs";
-import ProjectCard from '../components/ProjectCard';
-import projects from "../utils/projectData";
-import "../style.css";
+import Footer from '../../components/Footer';
+import Navs from "../../components/Navs";
+import ProjectCard from '../../components/ProjectCard';
+import projects from "../../utils/projectData";
+import "./projects.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Projects() {

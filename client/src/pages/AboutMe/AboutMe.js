@@ -1,7 +1,6 @@
 import React from 'react';
-import Footer from '../components/Footer';
-import Navs from "../components/Navs";
-import "../style.css";
+import Footer from '../../components/Footer';
+import Navs from "../../components/Navs";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function AboutMe() {

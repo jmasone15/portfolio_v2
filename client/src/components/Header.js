@@ -22,7 +22,7 @@ export default function Header() {
     }
 
     return (
-        <>
+        <div>
             <Typist cursor={{ show: false }} onTypingDone={() => fadeIn()}>
                 <h1>Hello, my name is <span style={{ color: "white" }}>Jordan Masone</span></h1>
                 <Typist.Delay ms={500} />
@@ -38,6 +38,6 @@ export default function Header() {
                 <h3>Check out my <a style={{ color: "white" }} href="/projects">projects page</a> to see my latest projects.</h3>
                 <h3>Contact me for inquiries at: <a style={{ color: "white" }} target="_blank" rel="noreferrer" href="mailto:jordanmasone1@gmail.com?subject = Full Stack Developer Inquiry">jordanmasone1@gmail.com</a></h3>
             </div>
-        </>
+        </div>
     )
 }

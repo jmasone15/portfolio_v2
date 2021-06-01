@@ -1,11 +1,11 @@
 import React, { useState, useContext } from "react";
-import Footer from "../components/Footer";
-import Navs from "../components/Navs";
+import Footer from "../../components/Footer";
+import Navs from "../../components/Navs";
 import axios from "axios";
-import AuthContext from "../utils/context/AuthContext";
-import UserContext from "../utils/context/UserContext";
-import SignUp from "../components/SignUp";
-import SignedIn from "../components/SignedIn";
+import AuthContext from "../../utils/context/AuthContext";
+import UserContext from "../../utils/context/UserContext";
+import SignUp from "../../components/SignUp";
+import SignedIn from "../../components/SignedIn";
 
 export default function UserAuth() {
 

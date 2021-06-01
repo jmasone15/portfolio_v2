@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../components/Header";
-import Navs from "../components/Navs";
-import Footer from "../components/Footer";
-import "../style.css";
+import Header from "../../components/Header";
+import Navs from "../../components/Navs";
+import Footer from "../../components/Footer";
+import "./home.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home() {

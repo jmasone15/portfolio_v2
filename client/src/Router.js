@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import AboutMe from "./pages/AboutMe";
-import Skills from "./pages/Skills";
-import UserAuth from "./pages/UserAuth";
+import Home from "./pages/Home/Home";
+import Projects from "./pages/Projects/Projects";
+import AboutMe from "./pages/AboutMe/AboutMe";
+import Skills from "./pages/Skills/Skills";
+import UserAuth from "./pages/UserAuth/UserAuth";
 
 export default function Router() {
     return (

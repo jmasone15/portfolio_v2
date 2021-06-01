@@ -1,7 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
-import "../style.css"
 
 export default function Navs() {
 
@@ -14,7 +13,7 @@ export default function Navs() {
 
     return (
         <Navbar collapseOnSelect expand="xs" variant="dark">
-            <Navbar.Brand style={{ opacity: 0 }}>Brand Test</Navbar.Brand>
+            <Navbar.Brand className="op0">Brand Test</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav" className="dropdown">
                 <div className="first-drop" onClick={(e) => changePage(e, "/")}>
