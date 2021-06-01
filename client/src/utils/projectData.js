@@ -3,7 +3,7 @@ const projects = [
         id: "jO2rJ8%TD*0@fFwTC8dx9k*S7rD_Ra",
         name: "¿Donde?",
         img: "https://via.placeholder.com/175",
-        description: "Travel Planner built with MERN stack.",
+        description: "Full fledged Travel Planner built with MERN stack.",
         github: "https://github.com/jmasone15/travel-planner-project",
         deploy: "https://dondetravel.herokuapp.com/"
     },
@@ -27,7 +27,7 @@ const projects = [
         id: "IYEVpIrACb#o*NL-3voZICZ@EstkcI",
         name: "React Pokedex",
         img: "https://via.placeholder.com/175",
-        description: "This Pokedex is built with React and using a Pokemon API to let users search and view data on any pokemon.",
+        description: "This Pokedex is built with React and a Pokemon API to let users search and view data on any pokemon.",
         github: "https://github.com/jmasone15/react-pokedex",
         deploy: "https://jmasone15.github.io/react-pokedex"
     },

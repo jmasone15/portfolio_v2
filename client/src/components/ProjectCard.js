@@ -9,7 +9,7 @@ export default function ProjectCard({ color, data }) {
                     <div className="content">
                         <div className="icon" style={{ backgroundColor: color }}>
                             <i className="fa fa-linkedin-square" style={{ backgroundColor: color, position: "absolute", left: "130px" }} aria-hidden="true">
-                                <h2 style={{ backgroundColor: color, color: "#5C5D67" }}>{data.name}</h2>
+                                <h2 style={{ backgroundColor: color, color: "black" }}>{data.name}</h2>
                             </i>
                         </div>
                     </div>
