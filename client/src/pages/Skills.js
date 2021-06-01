@@ -26,7 +26,7 @@ export default function Skills() {
                 <h1>skills</h1>
             </div>
             <div className="s-body">
-                <h5>this page showcases some of my skills in full stack development</h5>
+                <h5>This page showcases some of my skills in full stack development</h5>
             </div>
             <div className="s-container">
                 <Container>

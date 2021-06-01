@@ -7,15 +7,13 @@ const secretKey = "rR58%&h7bm6@th*jjZwDuN3ahB2ukF+5ZYHsZ88Str^2mqsb_e"
 router.post("/signup", async (req, res) => {
     // If there is an error inside of the try block, it will move to the catch block and handle the error.
     try {
-        const { email, password, passwordVerify } = req.body;
+        const { email, password } = req.body;
 
         // Validation
-        if (!email || !password || !passwordVerify)
+        if (!email || !password)
             return res.status(400).send("Please fill out all of the fields.");
         if (password.length < 6)
             return res.status(400).send("Please enter a password that is at least 6 characters long.");
-        if (password !== passwordVerify)
-            return res.status(400).send("Please enter the same password twice.");
 
         // Ensure only unique emails
         const existingUser = await User.findOne({ email });
