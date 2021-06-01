@@ -35,7 +35,7 @@ export default function Header() {
                 </h1>
             </Typist>
             <div id="fade" className="fade">
-                <h3>Check out my projects page to see my latest projects.</h3>
+                <h3>Check out my <a style={{ color: "white" }} href="/projects">projects page</a> to see my latest projects.</h3>
                 <h3>Contact me for inquiries at: <a style={{ color: "white" }} target="_blank" rel="noreferrer" href="mailto:jordanmasone1@gmail.com?subject = Full Stack Developer Inquiry">jordanmasone1@gmail.com</a></h3>
             </div>
         </>

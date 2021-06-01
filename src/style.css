@@ -7,9 +7,8 @@
     position: absolute;
     top: 35%;
     left: 28%;
-    margin: auto;
     text-align: center;
-    color: #caf0f8;
+    color: #6ed3e7;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -27,7 +26,7 @@
     top: 11%;
     left: 5%;
     margin: auto;
-    color: #caf0f8;
+    color: #6ed3e7;
 }
 
 .p-container {
@@ -36,11 +35,11 @@
     left: 19%;
     margin: auto;
     text-align: center;
-    color: #caf0f8;
+    color: #64daf1;
 }
 
 .grid {
-    color: white;
+    color: rgb(245, 228, 228);
     background-color: rgba(0, 0, 0, 0.5);
 }
 
