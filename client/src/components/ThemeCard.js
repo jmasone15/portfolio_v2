@@ -4,7 +4,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from 'react-bootstrap/Card';
 
-export default function ThemeCard() {
+export default function ThemeCard({ theme, setTheme }) {
+
     return (
         <Container style={{ marginTop: "100px" }}>
             <Row>

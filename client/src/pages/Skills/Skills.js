@@ -6,8 +6,9 @@ import AuthCard from '../../components/AuthCard';
 import ThemeCard from '../../components/ThemeCard';
 import "./skills.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Languages from '../../components/Languages';
 
-export default function Skills() {
+export default function Skills({ theme, setTheme }) {
 
     const history = useHistory();
 
@@ -27,7 +28,7 @@ export default function Skills() {
             </div>
             <div className="s-container">
                 <AuthCard changePage={changePage} />
-                <ThemeCard />
+                <Languages />
             </div>
             <Footer />
         </>
