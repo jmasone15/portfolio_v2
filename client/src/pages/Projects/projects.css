@@ -1,48 +1,15 @@
-* {
-    background-color: #5C5D67;
-    font-family: 'Courier New', Courier, monospace;
+.p-wrapper {
+  background-color: #6c757d;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 250vh;
+  max-height: 175vh;
 }
 
 .p-header {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    margin: auto;
-    text-align: center;
-    color: white;
-}
-
-.p-body {
-    position: absolute;
-    top: 11%;
-    left: 5%;
-    margin: auto;
-    color: #6ed3e7;
-}
-
-.p-container {
-    position: absolute;
-    top: 15%;
-    left: 19%;
-    margin: auto;
-    text-align: center;
-    color: #64daf1;
-}
-
-.container {
-    width: 1000px;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-}
-
-.p-card {
-    margin: 50px;
-}
-
-.container .p-card {
-    position: relative;
-    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 30px;
 }
 
 .container .p-card .icon {
@@ -56,9 +23,6 @@
 }
 
 .container .p-card .icon .fa {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
     font-size: 80px;
     transition: 0.7s;
@@ -69,7 +33,6 @@
 i {
     position: absolute;
     top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
     font-size: 80px;
     transition: 0.7s;
@@ -87,6 +50,7 @@ i {
     background: #333;
     display: flex;
     justify-content: center;
+    text-align: center;
     align-items: center;
     z-index: 1;
     transform: translateY(100px);
@@ -143,4 +107,8 @@ i {
 .container a {
     text-decoration: none;
     color: #414141;
+}
+
+.content {
+    text-align: center;
 }

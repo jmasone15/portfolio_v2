@@ -5,51 +5,67 @@ import Col from 'react-bootstrap/Col';
 
 export default function Languages() {
     return (
-        <div className="l-container">
-            <div>
-                <h1>Languages</h1>
-                <h5 style={{ color: "#6ed3e7" }}>These are some of the languages I use in all of my projects</h5>
-            </div>
-            <Container className="justify-content-md-center" style={{ marginTop: "100px" }}>
-                <Row>
-                    <Col style={{ marginRight: "75px" }}>
-                        <i class="devicon-html5-plain-wordmark"></i>
-                    </Col>
-                    <Col style={{ marginRight: "75px" }}>
-                        <i class="devicon-css3-plain-wordmark"></i>
-                    </Col>
-                    <Col style={{ marginRight: "75px" }}>
-                        <i class="devicon-javascript-plain"></i>
-                    </Col>
-                    <Col style={{ marginRight: "75px" }}>
-                        <i class="devicon-mysql-plain-wordmark"></i>
-                    </Col>
-                    <Col style={{ marginRight: "75px" }}>
-                        <i class="devicon-mongodb-plain-wordmark"></i>
-                    </Col>
-                    <Col style={{ marginRight: "75px" }}>
-                        <i class="devicon-github-original-wordmark"></i>
-                    </Col>
-                    <Col style={{ marginRight: "75px" }}>
-                        <i class="devicon-express-original-wordmark"></i>
-                    </Col>
-                    <Col style={{ marginRight: "75px" }}>
-                        <i class="devicon-nodejs-plain-wordmark"></i>
-                    </Col>
-                    <Col style={{ marginRight: "75px" }}>
-                        <i class="devicon-react-original-wordmark"></i>
-                    </Col>
-                    <Col style={{ marginRight: "75px" }}>
-                        <i class="devicon-jquery-plain-wordmark"></i>
-                    </Col>
-                    <Col style={{ marginRight: "75px" }}>
-                        <i class="devicon-react-original-wordmark"></i>
-                    </Col>
-                    <Col style={{ marginRight: "75px" }}>
-                        <i class="devicon-react-original-wordmark"></i>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
+        <Container>
+            <Row>
+                <Col>
+                    <div className="l-body">
+                        <h1 style={{ color: "white" }}>Languages and Technologies</h1>
+                        <h5>These are some of the languages and technologies I use in all of my projects.</h5>
+                        <h5> I make sure to stay up to date with the latest advancements in web devevlopment technologies.</h5>
+                    </div>
+                </Col>
+            </Row>
+            <Row className="tech-row-first">
+                <Col>
+                    <i class="devicon-html5-plain-wordmark"></i>
+                </Col>
+                <Col>
+                    <i class="devicon-css3-plain-wordmark"></i>
+                </Col>
+                <Col>
+                    <i class="devicon-javascript-plain"></i>
+                </Col>
+                <Col>
+                    <i class="devicon-mysql-plain-wordmark"></i>
+                </Col>
+                <Col>
+                    <i class="devicon-mongodb-plain-wordmark"></i>
+                </Col>
+            </Row>
+            <Row className="tech-row">
+                <Col>
+                    <i class="devicon-bootstrap-plain-wordmark"></i>
+                </Col>
+                <Col>
+                    <i class="devicon-python-plain-wordmark"></i>
+                </Col>
+                <Col>
+                    <i class="devicon-materialui-plain"></i>
+                </Col>
+                <Col>
+                    <i class="devicon-php-plain"></i>
+                </Col>
+                <Col>
+                    <i class="devicon-handlebars-plain-wordmark"></i>
+                </Col>
+            </Row>
+            <Row className="tech-row-last">
+                <Col>
+                    <i class="devicon-express-original-wordmark"></i>
+                </Col>
+                <Col>
+                    <i class="devicon-nodejs-plain-wordmark"></i>
+                </Col>
+                <Col>
+                    <i class="devicon-react-original-wordmark"></i>
+                </Col>
+                <Col>
+                    <i class="devicon-github-original-wordmark"></i>
+                </Col>
+                <Col>
+                    <i class="devicon-jquery-plain-wordmark"></i>
+                </Col>
+            </Row>
+        </Container>
     )
 }

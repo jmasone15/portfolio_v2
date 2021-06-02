@@ -4,10 +4,8 @@ import "../pages/Home/home.css";
 
 export default function Footer() {
     return (
-        <div className="fixed-bottom footer">
-            <Navbar variant="dark" style={{ justifyContent: "center" }}>
-                <p>&copy; {new Date().getFullYear()} Copyright: <a href="https://github.com/jmasone15" className="white"> Jordan Masone </a></p>
-            </Navbar>
-        </div>
+        <Navbar className="footer" fixed="bottom" variant="dark" style={{ justifyContent: "center" }}>
+            <p>&copy; {new Date().getFullYear()} Copyright: <a href="https://github.com/jmasone15" style={{ color: "white" }}> Jordan Masone </a></p>
+        </Navbar>
     )
 }

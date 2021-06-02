@@ -6,6 +6,10 @@ import AuthContext from "../../utils/context/AuthContext";
 import UserContext from "../../utils/context/UserContext";
 import SignUp from "../../components/SignUp";
 import SignedIn from "../../components/SignedIn";
+import Container from "react-bootstrap/esm/Container";
+import Row from "react-bootstrap/esm/Row";
+import Col from "react-bootstrap/esm/Col";
+import "./userauth.css"
 
 export default function UserAuth() {
 
@@ -32,34 +36,52 @@ export default function UserAuth() {
         }
     }
 
-    async function signOut(e, page) {
+    async function signOut(e) {
         e.preventDefault();
+        setEmail("");
+        setPassword("");
         await axios.get("/auth/logout");
         await getLoggedIn();
     }
 
     return (
-        <>
-            <Navs />
-            <div className="s-header">
-                <h1>user auth demo</h1>
-            </div>
-            {loggedIn === false && (
-                <SignUp
-                    email={email}
-                    setEmail={setEmail}
-                    password={password}
-                    setPassword={setPassword}
-                    signUp={signUp}
-                />
-            )}
-            {loggedIn === true && (
-                <SignedIn
-                    signOut={signOut}
-                    email={userEmail}
-                />
-            )}
+        <div className="u-wrapper">
+            <Container fluid>
+                <Row>
+                    <Col>
+                        <Navs />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <div className="u-header">
+                            <h1>user auth demo</h1>
+                        </div>
+                    </Col>
+                </Row>
+                <Container>
+                    <Row>
+                        <Col>
+                            {loggedIn === false && (
+                                <SignUp
+                                    email={email}
+                                    setEmail={setEmail}
+                                    password={password}
+                                    setPassword={setPassword}
+                                    signUp={signUp}
+                                />
+                            )}
+                            {loggedIn === true && (
+                                <SignedIn
+                                    signOut={signOut}
+                                    email={userEmail}
+                                />
+                            )}
+                        </Col>
+                    </Row>
+                </Container>
+            </Container>
             <Footer />
-        </>
+        </div>
     )
 }

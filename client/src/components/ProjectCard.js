@@ -1,9 +1,10 @@
 import React from 'react';
 import Button from "react-bootstrap/Button";
+import Container from 'react-bootstrap/esm/Container';
 
 export default function ProjectCard({ color, data, num }) {
     return (
-        <>
+        <Container>
             <div className="p-card">
                 <div className="face face1">
                     <div className="content">
@@ -33,6 +34,6 @@ export default function ProjectCard({ color, data, num }) {
                     </div>
                 </div>
             </div>
-        </>
+        </Container>
     )
 }

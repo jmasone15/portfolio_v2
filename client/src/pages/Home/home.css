@@ -1,22 +1,21 @@
-* {
-    background-color: #5C5D67;
-    font-family: 'Courier New', Courier, monospace;
-}
-
 .header {
-    position: absolute;
-    top: 35%;
-    left: 28%;
-    justify-content: center;
+    margin-top: 350px;
     text-align: center;
     color: #6ed3e7;
     font-family: 'Courier New', Courier, monospace;
 }
 
+.h-wrapper {
+  background-color: #6c757d;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 250vh;
+  max-height: 100vh;
+}
+
 .footer {
-    text-align: center;
-    justify-content: center;
-    color: #caf0f8;
+    color: #6ed3e7;
 }
 
 .op0 {
@@ -25,29 +24,25 @@
 
 .dropdown {
     z-index: 2;
-    background-color: #6c757d;
     color: white;
+    background-color: #6ed3e7;
 }
 
 .first-drop {
     text-align: center;
     margin:150px;
-    background-color: #6c757d;
 }
 .second-drop {
     text-align: center;
     margin:150px;
-    background-color: #6c757d;
 }
 .third-drop {
     text-align: center;
     margin:150px;
-    background-color: #6c757d;
 }
 .fourth-drop {
     text-align: center;
     margin:150px;
-    background-color: #6c757d;
 }
 
 .first-drop-text:hover {
@@ -69,17 +64,13 @@
 
 .first-drop-text {
     cursor: pointer;
-    background-color: #6c757d;
 }
 .second-drop-text {
     cursor: pointer;
-    background-color: #6c757d;
 }
 .third-drop-text {
     cursor: pointer;
-    background-color: #6c757d;
 }
 .fourth-drop-text {
     cursor: pointer;
-    background-color: #6c757d;
 }
