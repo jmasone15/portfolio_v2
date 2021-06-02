@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../../components/Header";
 import Navs from "../../components/Navs";
 import Footer from "../../components/Footer";
@@ -8,14 +8,18 @@ import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 
-export default function Home({ theme }) {
+export default function Home({ theme, currentPage, setCurrentPage }) {
+
+    useEffect(() => {
+        setCurrentPage("home")
+    });
 
     return (
         <div className={theme ? "h-wrapper" : "h-wrapper-dark"}>
             <Container fluid>
                 <Row>
                     <Col>
-                        <Navs theme={theme} />
+                        <Navs theme={theme} currentPage={currentPage} />
                     </Col>
                 </Row>
                 <Row>

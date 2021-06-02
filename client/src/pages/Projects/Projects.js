@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Footer from '../../components/Footer';
 import Navs from "../../components/Navs";
 import ProjectCard from '../../components/ProjectCard';
@@ -9,7 +9,7 @@ import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 
-export default function Projects({ theme }) {
+export default function Projects({ theme, currentPage, setCurrentPage }) {
 
     const lightBackgroundColors = [
         "#FFADAD",
@@ -32,14 +32,18 @@ export default function Projects({ theme }) {
         "#b9e769",
         "#efea5a",
         "#f1c453"
-    ]
+    ];
+
+    useEffect(() => {
+        setCurrentPage("project")
+    });
 
     return (
         <div className={theme ? "p-wrapper" : "p-wrapper-dark"}>
             <Container fluid>
                 <Row>
                     <Col>
-                        <Navs theme={theme} />
+                        <Navs theme={theme} currentPage={currentPage} />
                     </Col>
                 </Row>
                 <Row>

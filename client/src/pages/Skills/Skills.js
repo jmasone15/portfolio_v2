@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 import Footer from '../../components/Footer';
 import Navs from "../../components/Navs";
@@ -11,7 +11,7 @@ import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 
-export default function Skills({ theme, setTheme }) {
+export default function Skills({ theme, setTheme, setCurrentPage, currentPage }) {
 
     const history = useHistory();
 
@@ -20,12 +20,16 @@ export default function Skills({ theme, setTheme }) {
         history.push(link);
     };
 
+    useEffect(() => {
+        setCurrentPage("skills")
+    });
+
     return (
         <div className={theme ? "s-wrapper" : "s-wrapper-dark"}>
             <Container fluid>
                 <Row>
                     <Col>
-                        <Navs theme={theme} />
+                        <Navs theme={theme} currentPage={currentPage} />
                     </Col>
                 </Row>
                 <Row>

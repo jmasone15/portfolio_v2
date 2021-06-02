@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Footer from '../../components/Footer';
 import Navs from "../../components/Navs";
 import Container from 'react-bootstrap/esm/Container';
@@ -7,13 +7,19 @@ import Col from 'react-bootstrap/esm/Col';
 import "./aboutme.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function AboutMe() {
+export default function AboutMe({ theme, currentPage, setCurrentPage }) {
+
+    useEffect(() => {
+        setCurrentPage("aboutme")
+    });
+
+
     return (
         <div className="a-wrapper">
             <Container fluid>
                 <Row>
                     <Col>
-                        <Navs />
+                        <Navs theme={theme} currentPage={currentPage} />
                     </Col>
                 </Row>
                 <Row>
@@ -25,7 +31,7 @@ export default function AboutMe() {
                     </Col>
                 </Row>
             </Container>
-            <Footer />
+            <Footer theme={theme} />
         </div>
     )
 }
