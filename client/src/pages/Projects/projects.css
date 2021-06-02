@@ -1,5 +1,5 @@
 .p-wrapper {
-  background-color: #6c757d;
+  background-color: #D9D9D9;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -36,7 +36,6 @@ i {
     transform: translate(-50%, -50%);
     font-size: 80px;
     transition: 0.7s;
-    color: #fff;
 }
 
 .container .p-card .face {
@@ -47,7 +46,6 @@ i {
 
 .container .p-card .face.face1 {
     position: relative;
-    background: #333;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -111,4 +109,16 @@ i {
 
 .content {
     text-align: center;
+}
+
+
+/* Dark Mode */
+
+.p-wrapper-dark {
+  background-color: #1b1a1a;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 250vh;
+  max-height: 175vh;
 }

@@ -9,9 +9,9 @@ import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 
-export default function Projects() {
+export default function Projects({ theme }) {
 
-    const backgroundColors = [
+    const lightBackgroundColors = [
         "#FFADAD",
         "#FFD6A5",
         "#FDFFB6",
@@ -21,59 +21,70 @@ export default function Projects() {
         "#BDB2FF",
         "#FFC6FF",
         "#ffc8dd"
+    ];
+    const darkBackgroundColors = [
+        "#54478c",
+        "#2c699a",
+        "#048ba8",
+        "#0db39e",
+        "#16db93",
+        "#83e377",
+        "#b9e769",
+        "#efea5a",
+        "#f1c453"
     ]
 
     return (
-        <div className="p-wrapper">
+        <div className={theme ? "p-wrapper" : "p-wrapper-dark"}>
             <Container fluid>
                 <Row>
                     <Col>
-                        <Navs />
+                        <Navs theme={theme} />
                     </Col>
                 </Row>
                 <Row>
                     <div className="p-header">
-                        <h1 style={{ color: "white" }}>projects</h1>
-                        <h5 style={{ color: "#64daf1" }}>This is my portfolio of various projects I have worked on and am currently working on.</h5>
+                        <h1 style={theme ? { color: "black" } : { color: "white" }}>projects</h1>
+                        <h5 style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }}>This is my portfolio of various projects I have worked on and am currently working on.</h5>
                     </div>
                 </Row>
                 <Container>
                     <Row>
                         <Col>
-                            <ProjectCard color={backgroundColors[0]} data={projects[0]} num={140} />
+                            <ProjectCard theme={theme} color={theme ? lightBackgroundColors[0] : darkBackgroundColors[0]} data={projects[0]} num={140} />
                         </Col>
                         <Col>
-                            <ProjectCard color={backgroundColors[1]} data={projects[2]} num={140} />
+                            <ProjectCard theme={theme} color={theme ? lightBackgroundColors[1] : darkBackgroundColors[1]} data={projects[2]} num={140} />
                         </Col>
                         <Col>
-                            <ProjectCard color={backgroundColors[2]} data={projects[3]} num={150} />
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <ProjectCard color={backgroundColors[3]} data={projects[4]} num={120} />
-                        </Col>
-                        <Col>
-                            <ProjectCard color={backgroundColors[4]} data={projects[5]} num={120} />
-                        </Col>
-                        <Col>
-                            <ProjectCard color={backgroundColors[5]} data={projects[6]} num={120} />
+                            <ProjectCard theme={theme} color={theme ? lightBackgroundColors[2] : darkBackgroundColors[2]} data={projects[3]} num={150} />
                         </Col>
                     </Row>
                     <Row>
                         <Col>
-                            <ProjectCard color={backgroundColors[6]} data={projects[7]} num={130} />
+                            <ProjectCard theme={theme} color={theme ? lightBackgroundColors[3] : darkBackgroundColors[3]} data={projects[4]} num={120} />
                         </Col>
                         <Col>
-                            <ProjectCard color={backgroundColors[7]} data={projects[8]} num={145} />
+                            <ProjectCard theme={theme} color={theme ? lightBackgroundColors[4] : darkBackgroundColors[4]} data={projects[5]} num={120} />
                         </Col>
                         <Col>
-                            <ProjectCard color={backgroundColors[8]} data={projects[1]} num={150} />
+                            <ProjectCard theme={theme} color={theme ? lightBackgroundColors[5] : darkBackgroundColors[5]} data={projects[6]} num={120} />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <ProjectCard theme={theme} color={theme ? lightBackgroundColors[6] : darkBackgroundColors[6]} data={projects[7]} num={130} />
+                        </Col>
+                        <Col>
+                            <ProjectCard theme={theme} color={theme ? lightBackgroundColors[7] : darkBackgroundColors[7]} data={projects[8]} num={145} />
+                        </Col>
+                        <Col>
+                            <ProjectCard theme={theme} color={theme ? lightBackgroundColors[8] : darkBackgroundColors[8]} data={projects[1]} num={150} />
                         </Col>
                     </Row>
                 </Container>
             </Container>
-            <Footer />
-        </div>
+            <Footer theme={theme} />
+        </div >
     )
 }

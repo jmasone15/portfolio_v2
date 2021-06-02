@@ -25,7 +25,7 @@ export default function Skills({ theme, setTheme }) {
             <Container fluid>
                 <Row>
                     <Col>
-                        <Navs />
+                        <Navs theme={theme} />
                     </Col>
                 </Row>
                 <Row>
@@ -58,7 +58,7 @@ export default function Skills({ theme, setTheme }) {
                     </Row>
                 </Container>
             </Container>
-            <Footer />
+            <Footer theme={theme} />
         </div>
     )
 }

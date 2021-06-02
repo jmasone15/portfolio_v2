@@ -30,17 +30,20 @@
 .tech-row-first {
   text-align: center;
   margin-top: 100px;
+  color: white;
 }
 
 .tech-row {
   text-align: center;
   margin-top: 150px;
+  color: white;
 }
 
 .tech-row-last {
   text-align: center;
   margin-top: 150px;
   margin-bottom: 100px;
+  color: white;
 }
 
 .s-wrapper {

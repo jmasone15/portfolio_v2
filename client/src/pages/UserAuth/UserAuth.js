@@ -11,7 +11,7 @@ import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 import "./userauth.css"
 
-export default function UserAuth() {
+export default function UserAuth({ theme }) {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -49,7 +49,7 @@ export default function UserAuth() {
             <Container fluid>
                 <Row>
                     <Col>
-                        <Navs />
+                        <Navs theme={theme} />
                     </Col>
                 </Row>
                 <Row>
@@ -81,7 +81,7 @@ export default function UserAuth() {
                     </Row>
                 </Container>
             </Container>
-            <Footer />
+            <Footer theme={theme} />
         </div>
     )
 }

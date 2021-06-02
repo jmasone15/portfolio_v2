@@ -8,23 +8,23 @@ import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 
-export default function Home() {
+export default function Home({ theme }) {
 
     return (
-        <div className="h-wrapper">
+        <div className={theme ? "h-wrapper" : "h-wrapper-dark"}>
             <Container fluid>
                 <Row>
                     <Col>
-                        <Navs />
+                        <Navs theme={theme} />
                     </Col>
                 </Row>
                 <Row>
                     <Col className="header">
-                        <Header />
+                        <Header theme={theme} />
                     </Col>
                 </Row>
             </Container>
-            <Footer />
+            <Footer theme={theme} />
         </div>
     )
 }

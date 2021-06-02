@@ -1,7 +1,7 @@
 import React from "react";
 import Typist from 'react-typist';
 
-export default function Header() {
+export default function Header({ theme }) {
 
     const fadeIn = () => {
         setInterval(show, 100);
@@ -22,21 +22,21 @@ export default function Header() {
     }
 
     return (
-        <div>
+        <div style={theme ? {} : { color: "white" }}>
             <Typist cursor={{ show: false }} onTypingDone={() => fadeIn()}>
-                <h1>Hello, my name is <span style={{ color: "white" }}>Jordan Masone</span></h1>
+                <h1>Hello, my name is <span style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }}>Jordan Masone</span></h1>
                 <Typist.Delay ms={500} />
                 <h1>
-                    I am a <a style={{ color: "white" }} href="https://github.com/jmasone15">Front End Developer</a>
+                    I am a <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} href="https://github.com/jmasone15">Front End Developer</a>
                     <Typist.Backspace count={20} delay={500} />
-                    <Typist.Delay ms={500} /> <a style={{ color: "white" }} href="https://github.com/jmasone15">Back End Developer</a>
+                    <Typist.Delay ms={500} /> <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} href="https://github.com/jmasone15">Back End Developer</a>
                     <Typist.Backspace count={19} delay={500} />
-                    <Typist.Delay ms={500} /> <a style={{ color: "white" }} href="https://github.com/jmasone15">Full Stack Developer</a>
+                    <Typist.Delay ms={500} /> <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} href="https://github.com/jmasone15">Full Stack Developer</a>
                 </h1>
             </Typist>
             <div id="fade" className="fade">
-                <h3>Check out my <a style={{ color: "white" }} href="/projects">projects page</a> to see my latest projects.</h3>
-                <h3>Contact me for inquiries at: <a style={{ color: "white" }} target="_blank" rel="noreferrer" href="mailto:jordanmasone1@gmail.com?subject = Full Stack Developer Inquiry">jordanmasone1@gmail.com</a></h3>
+                <h3>Check out my <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} href="/projects">projects page</a> to see my latest projects.</h3>
+                <h3>Contact me for inquiries at: <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} target="_blank" rel="noreferrer" href="mailto:jordanmasone1@gmail.com?subject = Full Stack Developer Inquiry">jordanmasone1@gmail.com</a></h3>
             </div>
         </div>
     )
