@@ -17,6 +17,9 @@ app.use(morgan("tiny")); // logging framework
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
+    app.get("*", function (req, res) {
+        res.sendFile(path.join(__dirname, "./client/build/index.html"));
+    });
 }
 
 // Database Connection
@@ -33,8 +36,3 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/portoflioBacken
 
 // Routes
 app.use("/auth", require("./routes/userRoutes"));
-
-// Only use for heroku
-// app.get("*", function (req, res) {
-//     res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
