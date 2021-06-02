@@ -8,7 +8,7 @@ import UserAuth from "./pages/UserAuth/UserAuth";
 
 export default function Router() {
 
-    const [theme, setTheme] = useState("Light!");
+    const [theme, setTheme] = useState(true);
 
     return (
         <BrowserRouter>

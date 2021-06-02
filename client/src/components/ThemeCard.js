@@ -6,11 +6,19 @@ import Card from 'react-bootstrap/Card';
 
 export default function ThemeCard({ theme, setTheme }) {
 
+    const changeTheme = () => {
+        if (theme === true) {
+            setTheme(false);
+        } else {
+            setTheme(true);
+        };
+    };
+
     return (
         <Container>
             <Row>
                 <Col>
-                    <Card>
+                    <Card className={theme ? "" : "theme-card-dark"}>
                         <Card.Body>
                             <Card.Title className="auth-title">Theme Switcher</Card.Title>
                             <Row className="font">
@@ -28,12 +36,12 @@ export default function ThemeCard({ theme, setTheme }) {
                                     </Card.Text>
                                     <Card.Text>
                                         <form>
-                                            <label className="label">
+                                            <label className={theme ? "label" : "label-dark"}>
                                                 <div className="toggle">
-                                                    <input className="toggle-state" type="checkbox" name="check" value="check" />
+                                                    <input onClick={() => changeTheme()} className="toggle-state" type="checkbox" name="check" value="check" />
                                                     <div className="indicator"></div>
                                                 </div>
-                                                <div className="label-text">Light!</div>
+                                                <div className={theme ? "label-text" : "label-text-dark"}>{theme ? "Light!" : "Dark!"}</div>
                                             </label>
                                         </form>
                                     </Card.Text>

@@ -21,7 +21,7 @@ export default function Skills({ theme, setTheme }) {
     };
 
     return (
-        <div className="s-wrapper">
+        <div className={theme ? "s-wrapper" : "s-wrapper-dark"}>
             <Container fluid>
                 <Row>
                     <Col>
@@ -29,16 +29,16 @@ export default function Skills({ theme, setTheme }) {
                     </Col>
                 </Row>
                 <Row>
-                    <div className="s-header">
-                        <h1 style={{ color: "white" }}>skills</h1>
-                        <h5 style={{ color: "#64daf1" }}>This page showcases some of my skills in full stack development</h5>
+                    <div className={theme ? "s-header" : "s-header-dark"}>
+                        <h1 style={theme ? { color: "black" } : { color: "white" }}>skills</h1>
+                        <h4 style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }}>This page showcases some of my skills in full stack development</h4>
                     </div>
                 </Row>
                 <Container>
                     <Row>
                         <Col>
                             <div className="s-container">
-                                <AuthCard changePage={changePage} />
+                                <AuthCard changePage={changePage} theme={theme} />
                             </div>
                         </Col>
                     </Row>
@@ -52,7 +52,7 @@ export default function Skills({ theme, setTheme }) {
                     <Row>
                         <Col>
                             <div className="l-container">
-                                <Languages />
+                                <Languages theme={theme} />
                             </div>
                         </Col>
                     </Row>

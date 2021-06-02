@@ -1,19 +1,31 @@
 import React from 'react';
 import Footer from '../../components/Footer';
 import Navs from "../../components/Navs";
+import Container from 'react-bootstrap/esm/Container';
+import Row from 'react-bootstrap/esm/Row';
+import Col from 'react-bootstrap/esm/Col';
+import "./aboutme.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function AboutMe() {
     return (
-        <>
-            <Navs />
-            <div className="p-header">
-                <h1>about me</h1>
-            </div>
-            <div className="p-body">
-                <h5>blah blah blah blah blah blah blah blah blah blah blah blah</h5>
-            </div>
+        <div className="a-wrapper">
+            <Container fluid>
+                <Row>
+                    <Col>
+                        <Navs />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <div className="a-header">
+                            <h1 style={{ color: "white" }}>about me</h1>
+                            <h5 style={{ color: "#6ed3e7" }}>blah blah blah blah blah blah blah blah blah blah blah blah</h5>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
             <Footer />
-        </>
+        </div>
     )
 }

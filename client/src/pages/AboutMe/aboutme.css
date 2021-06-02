@@ -1,0 +1,13 @@
+.a-wrapper {
+  background-color: #6c757d;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 250vh;
+  max-height: 100vh;
+}
+
+.a-header {
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 30px;
+}

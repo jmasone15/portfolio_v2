@@ -5,12 +5,12 @@ import Col from "react-bootstrap/Col";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-export default function AuthCard({ changePage }) {
+export default function AuthCard({ changePage, theme }) {
     return (
         <Container>
             <Row>
                 <Col>
-                    <Card>
+                    <Card className={theme ? "" : "auth-card-dark"}>
                         <Card.Body>
                             <Card.Title className="auth-title" >User Authentication</Card.Title>
                             <Row className="font">
@@ -36,7 +36,7 @@ export default function AuthCard({ changePage }) {
                                     </Card.Text>
                                 </Col>
                             </Row>
-                            <Button className="auth-btn" onClick={(e) => changePage(e, "/userauth")}>Try it Out!</Button>
+                            <Button className={theme ? "auth-btn" : "auth-btn-dark"} onClick={(e) => changePage(e, "/userauth")}>Try it Out!</Button>
                         </Card.Body>
                     </Card>
                 </Col>
