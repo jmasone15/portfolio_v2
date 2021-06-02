@@ -45,7 +45,7 @@ export default function UserAuth({ theme }) {
     }
 
     return (
-        <div className="u-wrapper">
+        <div className={theme ? "u-wrapper" : "u-wrapper-dark"}>
             <Container fluid>
                 <Row>
                     <Col>
@@ -54,7 +54,7 @@ export default function UserAuth({ theme }) {
                 </Row>
                 <Row>
                     <Col>
-                        <div className="u-header">
+                        <div className={theme ? "u-header" : "u-header-dark"}>
                             <h1>user auth demo</h1>
                         </div>
                     </Col>
@@ -69,12 +69,14 @@ export default function UserAuth({ theme }) {
                                     password={password}
                                     setPassword={setPassword}
                                     signUp={signUp}
+                                    theme={theme}
                                 />
                             )}
                             {loggedIn === true && (
                                 <SignedIn
                                     signOut={signOut}
                                     email={userEmail}
+                                    theme={theme}
                                 />
                             )}
                         </Col>
