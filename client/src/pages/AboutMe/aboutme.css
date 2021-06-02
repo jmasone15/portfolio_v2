@@ -1,5 +1,5 @@
 .a-wrapper {
-  background-color: #6c757d;
+  background-color: #D9D9D9;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -8,6 +8,22 @@
 }
 
 .a-header {
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 30px;
+}
+
+/* Dark Mode */
+
+.a-wrapper-dark {
+  background-color: #1b1a1a;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 250vh;
+  max-height: 100vh;
+}
+
+.a-header-dark {
     font-family: 'Courier New', Courier, monospace;
     margin-left: 30px;
 }

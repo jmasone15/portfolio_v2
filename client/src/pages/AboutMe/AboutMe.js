@@ -15,7 +15,7 @@ export default function AboutMe({ theme, currentPage, setCurrentPage }) {
 
 
     return (
-        <div className="a-wrapper">
+        <div className={theme ? "a-wrapper" : "a-wrapper-dark"}>
             <Container fluid>
                 <Row>
                     <Col>
@@ -25,8 +25,8 @@ export default function AboutMe({ theme, currentPage, setCurrentPage }) {
                 <Row>
                     <Col>
                         <div className="a-header">
-                            <h1 style={{ color: "white" }}>about me</h1>
-                            <h5 style={{ color: "#6ed3e7" }}>blah blah blah blah blah blah blah blah blah blah blah blah</h5>
+                            <h1 style={theme ? {} : { color: "white" }}>about me</h1>
+                            <h5 style={theme ? { color: "#8900f2" } : { color: "#6ed3e7" }}>blah blah blah blah blah blah blah blah blah blah blah blah</h5>
                         </div>
                     </Col>
                 </Row>
