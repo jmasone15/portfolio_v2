@@ -7,11 +7,13 @@ axios.defaults.withCredentials = true;
 
 function App() {
   return (
-    <AuthContextProvider>
-      <UserContextProvider>
-        <Router />
-      </UserContextProvider>
-    </AuthContextProvider >
+    <div data-barba="container">
+      <AuthContextProvider>
+        <UserContextProvider>
+          <Router />
+        </UserContextProvider>
+      </AuthContextProvider >
+    </div>
   );
 }
 
