@@ -7,50 +7,46 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
-import { TweenMax, TimelineMax, Power3, Power4 } from "gsap";
+import pageTransition from "../../utils/animations/pageTrans";
 
 export default function Home({ theme, currentPage, setCurrentPage }) {
 
+    //setInterval(show(id), time);
+
+    // For Page Transition
     let screen = useRef(null);
     let body = useRef(null);
 
     useEffect(() => {
         setCurrentPage("home");
-        let tl = new TimelineMax();
-        tl.to(screen, {
-            duration: 1.2,
-            width: "100%",
-            left: "0%",
-            ease: Power3.easeInOut,
-        });
-        tl.to(screen, {
-            duration: 1,
-            left: "100%",
-            ease: Power3.easeInOut,
-            delay: 0.3,
-        });
-        tl.set(screen, { left: "-100%" });
-        TweenMax.to(body, .3, {
-            css: {
-                opacity: "1",
-                pointerEvents: "auto",
-                ease: Power4.easeInOut
-            }
-        }).delay(2);
-        return () => {
-            TweenMax.to(body, 1, {
-                css: {
-                    opacity: "0",
-                    pointerEvents: 'none'
-                }
-            });
-        }
+        pageTransition(screen, body);
+        homeFadeIn()
     });
+
+    const homeFadeIn = () => {
+        setInterval(homeShow, 170);
+    };
+
+    const homeShow = () => {
+        const target = document.getElementById("h-load-fade");
+        if (target) {
+            let opacity = Number(window.getComputedStyle(target).getPropertyValue("opacity"));
+
+            if (opacity < 1) {
+                opacity += 0.1;
+                target.style.opacity = opacity
+            } else {
+                clearInterval(0);
+            }
+        }
+    }
 
     return (
         <div className={theme ? "h-wrapper" : "h-wrapper-dark"}>
             <div className="load-container">
-                <div className="load-screen" ref={(el) => (screen = el)}></div>
+                <div className={theme ? "h-load-screen" : "h-load-screen-dark"} ref={(el) => (screen = el)}>
+                    <h1 className={theme ? "h-load-text" : "h-load-text-dark"} id="h-load-fade">home</h1>
+                </div>
             </div>
             <Container fluid data-barba="container" className="home">
                 <Container fluid ref={(el) => (body = el)} className="head">

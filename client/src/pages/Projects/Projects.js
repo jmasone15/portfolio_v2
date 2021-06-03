@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
-import { TweenMax, TimelineMax, Power3, Power4 } from "gsap";
+import pageTransition from "../../utils/animations/pageTrans";
 
 export default function Projects({ theme, currentPage, setCurrentPage }) {
 
@@ -35,45 +35,40 @@ export default function Projects({ theme, currentPage, setCurrentPage }) {
         "#f1c453"
     ];
 
+    // For Page Transition
     let screen = useRef(null);
     let body = useRef(null);
 
     useEffect(() => {
         setCurrentPage("project");
-        var tl = new TimelineMax();
-        tl.to(screen, {
-            duration: 1.2,
-            height: "100%",
-            ease: Power3.easeInOut,
-        });
-        tl.to(screen, {
-            duration: 1,
-            top: "100%",
-            ease: Power3.easeInOut,
-            delay: 0.3,
-        });
-        tl.set(screen, { right: "-100%" });
-        TweenMax.to(body, .3, {
-            css: {
-                opacity: "1",
-                pointerEvents: "auto",
-                ease: Power4.easeInOut
-            }
-        }).delay(2);
-        return () => {
-            TweenMax.to(body, 1, {
-                css: {
-                    opacity: "0",
-                    pointerEvents: 'none'
-                }
-            });
-        }
+        pageTransition(screen, body);
+        projectFadeIn()
     });
+
+    const projectFadeIn = () => {
+        setInterval(projectShow, 170);
+    };
+
+    const projectShow = () => {
+        const target = document.getElementById("p-load-fade");
+        if (target) {
+            let opacity = Number(window.getComputedStyle(target).getPropertyValue("opacity"));
+
+            if (opacity < 1) {
+                opacity += 0.1;
+                target.style.opacity = opacity
+            } else {
+                clearInterval(0);
+            }
+        }
+    }
 
     return (
         <div className={theme ? "p-wrapper" : "p-wrapper-dark"}>
             <div className="load-container">
-                <div className="load-screen1" ref={(el) => (screen = el)}></div>
+                <div className={theme ? "p-load-screen" : "p-load-screen-dark"} ref={(el) => (screen = el)}>
+                    <h1 className={theme ? "p-load-text" : "p-load-text-dark"} id="p-load-fade">projects</h1>
+                </div>
             </div>
             <Container fluid data-barba="container" className="projects">
                 <Container fluid ref={(el) => (body = el)} className="head">

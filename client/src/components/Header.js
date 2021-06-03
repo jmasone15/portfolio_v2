@@ -3,11 +3,11 @@ import Typist from 'react-typist';
 
 export default function Header({ theme }) {
 
-    const fadeIn = () => {
-        setInterval(show, 100);
+    const headerfadeIn = () => {
+        setInterval(headerShow, 100);
     };
 
-    const show = () => {
+    const headerShow = () => {
         const target = document.getElementById("fade");
         if (target) {
             let opacity = Number(window.getComputedStyle(target).getPropertyValue("opacity"));
@@ -23,14 +23,15 @@ export default function Header({ theme }) {
 
     return (
         <div style={theme ? {} : { color: "white" }}>
-            <Typist cursor={{ show: false }} onTypingDone={() => fadeIn()}>
+            <Typist cursor={{ show: false }} onTypingDone={() => headerfadeIn()}>
+                <Typist.Delay ms={2000} />
                 <h1>Hello, my name is <span style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }}>Jordan Masone</span></h1>
                 <Typist.Delay ms={500} />
                 <h1>
-                    I am a <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} href="https://github.com/jmasone15">Front End Developer</a>
-                    <Typist.Backspace count={20} delay={500} />
-                    <Typist.Delay ms={500} /> <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} href="https://github.com/jmasone15">Back End Developer</a>
-                    <Typist.Backspace count={19} delay={500} />
+                    I am a <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} href="https://github.com/jmasone15">Front End</a>
+                    <Typist.Backspace count={10} delay={500} />
+                    <Typist.Delay ms={500} /> <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} href="https://github.com/jmasone15">Back End</a>
+                    <Typist.Backspace count={9} delay={500} />
                     <Typist.Delay ms={500} /> <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} href="https://github.com/jmasone15">Full Stack Developer</a>
                 </h1>
             </Typist>

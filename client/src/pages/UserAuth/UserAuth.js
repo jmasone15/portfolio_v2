@@ -55,7 +55,7 @@ export default function UserAuth({ theme }) {
                 <Row>
                     <Col>
                         <div className={theme ? "u-header" : "u-header-dark"}>
-                            <h1>user auth demo</h1>
+                            <h1>user authentication</h1>
                         </div>
                     </Col>
                 </Row>
