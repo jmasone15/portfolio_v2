@@ -15,7 +15,7 @@ export default function AboutMe({ theme, currentPage, setCurrentPage }) {
     let body = useRef(null);
 
     useEffect(() => {
-        setCurrentPage("project");
+        setCurrentPage("aboutme");
         pageTransition(screen, body);
         aboutMeFadeIn()
     });

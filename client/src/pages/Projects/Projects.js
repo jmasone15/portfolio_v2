@@ -80,7 +80,7 @@ export default function Projects({ theme, currentPage, setCurrentPage }) {
                     <Row>
                         <div className="p-header">
                             <h1 style={theme ? { color: "black" } : { color: "white" }}>projects</h1>
-                            <h5 style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }}>This is my portfolio of various projects I have worked on and am currently working on.</h5>
+                            <h4 style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }}>This is my portfolio of various projects I have worked on and am currently working on.</h4>
                         </div>
                     </Row>
                     <Container>

@@ -1,4 +1,5 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import Footer from "../../components/Footer";
 import Navs from "../../components/Navs";
 import axios from "axios";
@@ -11,10 +12,11 @@ import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 import "./userauth.css"
 
-export default function UserAuth({ theme }) {
+export default function UserAuth({ theme, setCurrentPage }) {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [switcher, setSwitcher] = useState("signup");
     const { getLoggedIn } = useContext(AuthContext);
     const { loggedIn } = useContext(AuthContext);
     const { userEmail } = useContext(UserContext);
@@ -36,6 +38,23 @@ export default function UserAuth({ theme }) {
         }
     }
 
+    async function login(e) {
+        e.preventDefault();
+
+        try {
+            const signUpData = {
+                email: email,
+                password: password
+            };
+
+            await axios.post("/auth/login", signUpData);
+            await getLoggedIn();
+        } catch (err) {
+            console.error(err);
+            alert(err.request.response);
+        }
+    }
+
     async function signOut(e) {
         e.preventDefault();
         setEmail("");
@@ -43,6 +62,17 @@ export default function UserAuth({ theme }) {
         await axios.get("/auth/logout");
         await getLoggedIn();
     }
+
+    const history = useHistory();
+
+    const changePage = (e) => {
+        e.preventDefault();
+        history.push("/skills");
+    };
+
+    useEffect(() => {
+        setCurrentPage("skills");
+    });
 
     return (
         <div className={theme ? "u-wrapper" : "u-wrapper-dark"}>
@@ -56,6 +86,7 @@ export default function UserAuth({ theme }) {
                     <Col>
                         <div className={theme ? "u-header" : "u-header-dark"}>
                             <h1>user authentication</h1>
+                            <h4 style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }}><span style={{ cursor: "pointer" }} onClick={(e) => changePage(e)}><u>back to skills page</u></span></h4>
                         </div>
                     </Col>
                 </Row>
@@ -69,7 +100,10 @@ export default function UserAuth({ theme }) {
                                     password={password}
                                     setPassword={setPassword}
                                     signUp={signUp}
+                                    login={login}
                                     theme={theme}
+                                    switcher={switcher}
+                                    setSwitcher={setSwitcher}
                                 />
                             )}
                             {loggedIn === true && (
@@ -77,6 +111,7 @@ export default function UserAuth({ theme }) {
                                     signOut={signOut}
                                     email={userEmail}
                                     theme={theme}
+                                    type={switcher}
                                 />
                             )}
                         </Col>

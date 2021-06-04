@@ -60,7 +60,7 @@
 .form__label {
   font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
-  margin-left: 4.9rem;
+  margin-left: 5.35rem;
   margin-top: 0.7rem;
   display: block;
   transition: all 0.3s;
@@ -80,6 +80,7 @@
   width: 90%;
   display: block;
   border-bottom: 0.3rem solid transparent;
+  border: solid 2px #8900f2;
   transition: all 0.3s;
 }
 
@@ -99,6 +100,16 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 } 
 
+.login-card-footer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-size: 15px;
+}
+
+.login-switcher {
+  color: blue;
+  cursor: pointer;
+}
 
 
 /* Dark Mode */
@@ -176,6 +187,7 @@
   width: 90%;
   display: block;
   border-bottom: 0.3rem solid transparent;
+  border: solid 2px #6ed3e7;
   transition: all 0.3s;
 }
 
@@ -196,4 +208,11 @@
   visibility: hidden;
   -webkit-transform: translateY(-4rem);
   transform: translateY(-4rem);
+}
+
+.login-card-footer-dark {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-size: 15px;
+  color: white;
 }
