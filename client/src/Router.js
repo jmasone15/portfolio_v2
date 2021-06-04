@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
 import AboutMe from "./pages/AboutMe/AboutMe";
 import Skills from "./pages/Skills/Skills";
 import UserAuth from "./pages/UserAuth/UserAuth";
+import Contact from "./pages/Contact/Contact";
 
 export default function Router() {
 
@@ -29,6 +30,9 @@ export default function Router() {
                 </Route>
                 <Route exact path="/userauth">
                     <UserAuth theme={theme} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+                </Route>
+                <Route exact path="/contact">
+                    <Contact theme={theme} currentPage={currentPage} setCurrentPage={setCurrentPage} />
                 </Route>
             </Switch>
         </BrowserRouter>

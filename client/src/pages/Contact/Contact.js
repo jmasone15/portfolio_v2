@@ -2,14 +2,13 @@ import React, { useRef, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 import Footer from '../../components/Footer';
 import Navs from "../../components/Navs";
-import AboutText from "../../components/AboutText";
+import ContactCard from "../../components/ContactCard";
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 import pageTransition from "../../utils/animations/pageTrans";
-import "./aboutme.css";
+import "./contact.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import AboutImages from '../../components/AboutImages';
 
 export default function AboutMe({ theme, currentPage, setCurrentPage }) {
 
@@ -28,7 +27,7 @@ export default function AboutMe({ theme, currentPage, setCurrentPage }) {
     };
 
     const aboutMeShow = () => {
-        const target = document.getElementById("a-load-fade");
+        const target = document.getElementById("c-load-fade");
         if (target) {
             let opacity = Number(window.getComputedStyle(target).getPropertyValue("opacity"));
 
@@ -45,15 +44,15 @@ export default function AboutMe({ theme, currentPage, setCurrentPage }) {
 
     const changePage = (e) => {
         e.preventDefault();
-        history.push("/contact");
+        history.push("/aboutme");
     };
 
 
     return (
-        <div className={theme ? "a-wrapper" : "a-wrapper-dark"}>
+        <div className={theme ? "c-wrapper" : "c-wrapper-dark"}>
             <div className="load-container">
-                <div className={theme ? "a-load-screen" : "a-load-screen-dark"} ref={(el) => (screen = el)}>
-                    <h1 className={theme ? "a-load-text" : "a-load-text-dark"} id="a-load-fade">about me</h1>
+                <div className={theme ? "c-load-screen" : "c-load-screen-dark"} ref={(el) => (screen = el)}>
+                    <h1 className={theme ? "c-load-text" : "c-load-text-dark"} id="c-load-fade">contact</h1>
                 </div>
             </div>
             <Container fluid data-barba="container" className="home">
@@ -65,31 +64,20 @@ export default function AboutMe({ theme, currentPage, setCurrentPage }) {
                     </Row>
                     <Row>
                         <Col>
-                            <div className="a-header">
-                                <h1 style={theme ? {} : { color: "white" }}>about me</h1>
-                                <h4 style={theme ? { color: "#8900f2" } : { color: "#6ed3e7" }}>Learn a little about me and what I can do for you</h4>
+                            <div className="c-header">
+                                <h1 style={theme ? {} : { color: "white" }}>contact</h1>
+                                <h4 style={theme ? { color: "#8900f2" } : { color: "#6ed3e7" }}>Let's connect! I'll buy the coffee</h4>
                             </div>
                         </Col>
                     </Row>
-                    <Row className="mt200">
-                        <Col xl={6} className="mb175">
-                            <Container>
-                                <Row>
-                                    <Col className="text-col">
-                                        <AboutText theme={theme} changePage={changePage} />
-                                    </Col>
-                                </Row>
-                            </Container>
-                        </Col>
-                        <Col xl={6} style={{ marginTop: "-100px" }}>
-                            <Container>
-                                <Row>
-                                    <Col>
-                                        <AboutImages theme={theme} />
-                                    </Col>
-                                </Row>
-                            </Container>
-                        </Col>
+                    <Row>
+                        <Container>
+                            <Row>
+                                <Col>
+                                    <ContactCard theme={theme} changePage={changePage} />
+                                </Col>
+                            </Row>
+                        </Container>
                     </Row>
                 </Container>
             </Container>

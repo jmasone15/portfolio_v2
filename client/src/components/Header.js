@@ -36,7 +36,7 @@ export default function Header({ theme }) {
                 </h1>
             </Typist>
             <div id="fade" className="fade">
-                <h3>Check out my <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} href="/projects">projects page</a> to see my latest projects.</h3>
+                <h3>Check out my <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} href="/project">projects page</a> to see my latest projects.</h3>
                 <h3>Contact me for inquiries at: <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} target="_blank" rel="noreferrer" href="mailto:jordanmasone1@gmail.com?subject = Full Stack Developer Inquiry">jordanmasone1@gmail.com</a></h3>
             </div>
         </div>
