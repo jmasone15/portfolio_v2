@@ -17,20 +17,22 @@ export default function ProjectCard({ color, data, num, theme }) {
                 </div>
                 <div className="face face2" style={theme ? { backgroundColor: "#8d99ae" } : { backgroundColor: "#bfc0c0" }}>
                     <div className="content" style={theme ? { backgroundColor: "#8d99ae" } : { backgroundColor: "#bfc0c0" }}>
-                        <p style={{ color: color, backgroundColor: theme ? "#8d99ae" : "#bfc0c0" }}>{data.description}</p>
+                        <p style={theme ? { color: "white", backgroundColor: "#8d99ae" } : { backgroundColor: "#bfc0c0" }}><b>{data.description}</b></p>
                         <br />
-                        <Button
+                        <button
                             target="_blank"
                             href={data.github}
-                            style={{ backgroundColor: color, border: `1px solid ${color}`, marginRight: "10px", color: theme ? "black" : "white" }}
+                            className={theme ? "p-btn p-btn-first" : "p-btn-dark p-btn-first-dark"}
+                            style={{ backgroundColor: color, border: `2px solid ${color}` }}
                         >Github
-                        </Button>
-                        <Button
+                        </button>
+                        <button
                             target="_blank"
                             href={data.deploy}
-                            style={{ backgroundColor: color, border: `1px solid ${color}`, color: theme ? "black" : "white" }}
+                            className={theme ? "p-btn p-btn-first" : "p-btn-dark p-btn-first-dark"}
+                            style={{ backgroundColor: color, border: `2px solid ${color}` }}
                         >Deployed
-                        </Button>
+                        </button>
                     </div>
                 </div>
             </div>

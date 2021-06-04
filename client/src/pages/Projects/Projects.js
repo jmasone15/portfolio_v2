@@ -85,35 +85,35 @@ export default function Projects({ theme, currentPage, setCurrentPage }) {
                     </Row>
                     <Container>
                         <Row>
-                            <Col>
+                            <Col lg={4}>
                                 <ProjectCard theme={theme} color={theme ? lightBackgroundColors[0] : darkBackgroundColors[0]} data={projects[0]} num={140} />
                             </Col>
-                            <Col>
+                            <Col lg={4}>
                                 <ProjectCard theme={theme} color={theme ? lightBackgroundColors[1] : darkBackgroundColors[1]} data={projects[2]} num={140} />
                             </Col>
-                            <Col>
+                            <Col lg={4}>
                                 <ProjectCard theme={theme} color={theme ? lightBackgroundColors[2] : darkBackgroundColors[2]} data={projects[3]} num={150} />
                             </Col>
                         </Row>
                         <Row>
-                            <Col>
+                            <Col lg={4}>
                                 <ProjectCard theme={theme} color={theme ? lightBackgroundColors[3] : darkBackgroundColors[3]} data={projects[4]} num={120} />
                             </Col>
-                            <Col>
+                            <Col lg={4}>
                                 <ProjectCard theme={theme} color={theme ? lightBackgroundColors[4] : darkBackgroundColors[4]} data={projects[5]} num={120} />
                             </Col>
-                            <Col>
+                            <Col lg={4}>
                                 <ProjectCard theme={theme} color={theme ? lightBackgroundColors[5] : darkBackgroundColors[5]} data={projects[6]} num={120} />
                             </Col>
                         </Row>
                         <Row>
-                            <Col>
+                            <Col lg={4}>
                                 <ProjectCard theme={theme} color={theme ? lightBackgroundColors[6] : darkBackgroundColors[6]} data={projects[7]} num={130} />
                             </Col>
-                            <Col>
+                            <Col lg={4}>
                                 <ProjectCard theme={theme} color={theme ? lightBackgroundColors[7] : darkBackgroundColors[7]} data={projects[8]} num={145} />
                             </Col>
-                            <Col>
+                            <Col lg={4}>
                                 <ProjectCard theme={theme} color={theme ? lightBackgroundColors[8] : darkBackgroundColors[8]} data={projects[1]} num={150} />
                             </Col>
                         </Row>
