@@ -32,6 +32,114 @@
     opacity: 0;
 }
 
+.mt200 {
+  margin-top: 200px;
+}
+
+.mb175 {
+  margin-bottom: 175px;
+}
+
+.text-col {
+  text-align: left;
+  margin-left: 30px;
+}
+
+.text-div {
+  color: #8900f2;
+}
+
+.text-header {
+  margin-bottom: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+}
+
+.images-selector input {
+  position: absolute;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.images-selector input:checked + .img-card {
+  filter: none;
+  transform: scaleY(1);
+}
+
+.img-card {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 3px solid #8900f2;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  filter: grayscale(1) opacity(.8);
+}
+
+.img-card:hover {
+  filter: grayscale(0) opacity(1);
+}
+
+.img-card::before,
+.img-card::after {
+  transform: scaleY(-1);
+}
+
+.img1 {
+  background-image: url(https://images.unsplash.com/photo-1442689859438-97407280183f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  margin-right: 20px;
+}
+
+.img2 {
+  background-image: url(https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+  margin-right: 20px;
+}
+
+.img3 {
+  background-image: url(https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+}
+
+.contact-btn {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 2px solid #8900f2;
+  border-radius: 0.6em;
+  color: #8900f2;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.contact-btn:hover, .contact-btn:focus {
+  color: #fff;
+  outline: 0;
+}
+
+.first-contact {
+  -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.first-contact:hover {
+  box-shadow: 0 0 40px 40px #8900f2 inset;
+}
+
 /* Dark Mode */
 
 .a-wrapper-dark {
@@ -66,4 +174,73 @@
     color: #1b1a1a;
     font-family: 'Courier New', Courier, monospace;
     opacity: 0;
+}
+
+.text-div-dark {
+  color: #6ed3e7;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text-header-dark {
+  color: white;
+  margin-bottom: 15px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.img-card-dark {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 3px solid #7bdff2;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  filter: grayscale(1) opacity(.8);
+}
+
+.img-card-dark:hover {
+  filter: grayscale(0) opacity(1);
+}
+
+.img-card-dark::before,
+.img-card-dark::after {
+  transform: scaleY(-1);
+}
+
+.contact-btn-dark {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 2px solid #6ed3e7;
+  border-radius: 0.6em;
+  color: #6ed3e7;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.contact-btn-dark:hover, .contact-btn-dark:focus {
+  color: #fff;
+  outline: 0;
+}
+
+.first-contact-dark {
+  -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.first-contact-dark:hover {
+  box-shadow: 0 0 40px 40px #6ed3e7 inset;
 }

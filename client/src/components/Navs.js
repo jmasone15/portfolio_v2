@@ -16,7 +16,7 @@ export default function Navs({ theme, currentPage }) {
     }
 
     return (
-        <Navbar collapseOnSelect expand="xs" variant="dark">
+        <Navbar collapseOnSelect expand="xs" variant={theme ? "light" : "dark"}>
             <Navbar.Brand className="op0">Brand Test</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav" className={theme ? "dropdown" : "dropdown-dark"}>
