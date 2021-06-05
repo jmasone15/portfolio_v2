@@ -1,5 +1,6 @@
 import React from "react";
 import Typist from 'react-typist';
+import { Link } from "react-router-dom";
 
 export default function Header({ theme, draw, setDraw }) {
 
@@ -47,8 +48,8 @@ export default function Header({ theme, draw, setDraw }) {
             </Typist>
             <div id="fade" className="fade">
                 <div>
-                    <h3>Check out my <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} href="/project">projects page</a> to see my latest projects.</h3>
-                    <h3>Or you can contact me directly through my <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} href="/contact">contact page.</a></h3>
+                    <h3>Check out my <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} href="https://porfolio2.herokuapp.com/project">projects page</a> to see my latest projects.</h3>
+                    <h3>Or you can contact me directly through my <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} href="https://porfolio2.herokuapp.com/contact">contact page.</a></h3>
                 </div>
                 <div style={{ marginTop: "50px" }}>
                     {draw === false && (<button className={theme ? "home-btn first-home" : "home-btn-dark first-home-dark"} onClick={(e) => drawingFunc(e)}>Draw on Me!</button>)}
