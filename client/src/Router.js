@@ -7,9 +7,8 @@ import Skills from "./pages/Skills/Skills";
 import UserAuth from "./pages/UserAuth/UserAuth";
 import Contact from "./pages/Contact/Contact";
 
-export default function Router() {
+export default function Router({ theme, setTheme }) {
 
-    const [theme, setTheme] = useState(false);
     const [currentPage, setCurrentPage] = useState("");
 
 

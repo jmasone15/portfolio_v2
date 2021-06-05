@@ -42,7 +42,7 @@ export default function Home({ theme, currentPage, setCurrentPage }) {
     }
 
     return (
-        <div className={theme ? "h-wrapper" : "h-wrapper-dark"}>
+        <div className="unselectable">
             <div className="load-container">
                 <div className={theme ? "h-load-screen" : "h-load-screen-dark"} ref={(el) => (screen = el)}>
                     <h1 className={theme ? "h-load-text" : "h-load-text-dark"} id="h-load-fade">home</h1>
@@ -55,10 +55,10 @@ export default function Home({ theme, currentPage, setCurrentPage }) {
                             <Navs theme={theme} currentPage={currentPage} />
                         </Col>
                     </Row>
-                    <Row>
-                        <Col className="header">
+                    <Row className="justify-content-md-center">
+                        <div className="header">
                             <Header theme={theme} />
-                        </Col>
+                        </div>
                     </Row>
                 </Container>
             </Container>

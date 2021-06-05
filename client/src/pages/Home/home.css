@@ -2,15 +2,22 @@
     margin-top: 350px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: fit-content;
 }
 
-.h-wrapper {
-  background-color: #D9D9D9;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  height: 250vh;
-  max-height: 100vh;
+.h {
+    max-width: min-content;
+    justify-content: center;
+}
+
+.unselectable {
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+    user-select: none;
 }
 
 .footer {
@@ -135,15 +142,6 @@
     text-align: center;
     color: #7bdff2;
     font-family: 'Courier New', Courier, monospace;
-}
-
-.h-wrapper-dark {
-  background-color: #1b1a1a;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  height: 250vh;
-  max-height: 100vh;
 }
 
 .footer-dark {
