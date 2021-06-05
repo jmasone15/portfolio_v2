@@ -1,7 +1,7 @@
 import React from "react";
 import Typist from 'react-typist';
 
-export default function Header({ theme }) {
+export default function Header({ theme, draw, setDraw }) {
 
     const headerfadeIn = () => {
         setInterval(headerShow, 100);
@@ -21,6 +21,16 @@ export default function Header({ theme }) {
         }
     }
 
+    const drawingFunc = (e) => {
+        e.preventDefault();
+
+        if (draw === false) {
+            setDraw(true)
+        } else {
+            setDraw(false)
+        };
+    };
+
     return (
         <div style={theme ? {} : { color: "white" }}>
             <Typist cursor={{ show: false }} onTypingDone={() => headerfadeIn()}>
@@ -36,8 +46,14 @@ export default function Header({ theme }) {
                 </h1>
             </Typist>
             <div id="fade" className="fade">
-                <h3>Check out my <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} href="/project">projects page</a> to see my latest projects.</h3>
-                <h3>Contact me for inquiries at: <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} target="_blank" rel="noreferrer" href="mailto:jordanmasone1@gmail.com?subject = Full Stack Developer Inquiry">jordanmasone1@gmail.com</a></h3>
+                <div>
+                    <h3>Check out my <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} href="/project">projects page</a> to see my latest projects.</h3>
+                    <h3>Or you can contact me directly through my <a style={theme ? { color: "#8900f2" } : { color: "#7bdff2" }} href="/contact">contact page.</a></h3>
+                </div>
+                <div style={{ marginTop: "50px" }}>
+                    {draw === false && (<button className={theme ? "home-btn first-home" : "home-btn-dark first-home-dark"} onClick={(e) => drawingFunc(e)}>Draw on Me!</button>)}
+                    {draw === true && (<button className={theme ? "home-btn first-home" : "home-btn-dark first-home-dark"} onClick={(e) => drawingFunc(e)}>Stop drawing on Me!</button>)}
+                </div>
             </div>
         </div>
     )

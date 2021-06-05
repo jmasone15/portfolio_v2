@@ -7,7 +7,7 @@ import Skills from "./pages/Skills/Skills";
 import UserAuth from "./pages/UserAuth/UserAuth";
 import Contact from "./pages/Contact/Contact";
 
-export default function Router({ theme, setTheme }) {
+export default function Router({ theme, setTheme, draw, setDraw }) {
 
     const [currentPage, setCurrentPage] = useState("");
 
@@ -16,22 +16,22 @@ export default function Router({ theme, setTheme }) {
         <BrowserRouter>
             <Switch>
                 <Route exact path="/">
-                    <Home theme={theme} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+                    <Home theme={theme} currentPage={currentPage} setCurrentPage={setCurrentPage} draw={draw} setDraw={setDraw} />
                 </Route>
                 <Route exact path="/project">
-                    <Projects theme={theme} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+                    <Projects theme={theme} currentPage={currentPage} setCurrentPage={setCurrentPage} setDraw={setDraw} />
                 </Route>
                 <Route exact path="/skills">
-                    <Skills theme={theme} setTheme={setTheme} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+                    <Skills theme={theme} setTheme={setTheme} currentPage={currentPage} setCurrentPage={setCurrentPage} setDraw={setDraw} />
                 </Route>
                 <Route exact path="/aboutme">
-                    <AboutMe theme={theme} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+                    <AboutMe theme={theme} currentPage={currentPage} setCurrentPage={setCurrentPage} setDraw={setDraw} />
                 </Route>
                 <Route exact path="/userauth">
-                    <UserAuth theme={theme} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+                    <UserAuth theme={theme} currentPage={currentPage} setCurrentPage={setCurrentPage} setDraw={setDraw} />
                 </Route>
                 <Route exact path="/contact">
-                    <Contact theme={theme} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+                    <Contact theme={theme} currentPage={currentPage} setCurrentPage={setCurrentPage} setDraw={setDraw} />
                 </Route>
             </Switch>
         </BrowserRouter>

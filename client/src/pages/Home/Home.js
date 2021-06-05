@@ -9,7 +9,7 @@ import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 import pageTransition from "../../utils/animations/pageTrans";
 
-export default function Home({ theme, currentPage, setCurrentPage }) {
+export default function Home({ theme, currentPage, setCurrentPage, draw, setDraw }) {
 
     //setInterval(show(id), time);
 
@@ -57,7 +57,7 @@ export default function Home({ theme, currentPage, setCurrentPage }) {
                     </Row>
                     <Row className="justify-content-md-center">
                         <div className="header">
-                            <Header theme={theme} />
+                            <Header theme={theme} draw={draw} setDraw={setDraw} />
                         </div>
                     </Row>
                 </Container>

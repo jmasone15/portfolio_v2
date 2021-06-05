@@ -12,7 +12,7 @@ import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 import pageTransition from "../../utils/animations/pageTrans";
 
-export default function Skills({ theme, setTheme, setCurrentPage, currentPage }) {
+export default function Skills({ theme, setTheme, setCurrentPage, currentPage, setDraw }) {
 
     const history = useHistory();
 
@@ -28,7 +28,8 @@ export default function Skills({ theme, setTheme, setCurrentPage, currentPage })
     useEffect(() => {
         setCurrentPage("skills");
         pageTransition(screen, body);
-        skillsFadeIn()
+        skillsFadeIn();
+        setDraw(false);
     });
 
     const skillsFadeIn = () => {

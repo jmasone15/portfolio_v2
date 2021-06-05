@@ -46,15 +46,6 @@
   color: white;
 }
 
-.s-wrapper {
-  background-color: #D9D9D9;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  height: 250vh;
-  max-height: 180vh;
-}
-
 .auth-btn {
   background-color: #8900f2;
   color: white;
@@ -144,17 +135,6 @@
 
 
 /* Dark mode */
-
-
-
-.s-wrapper-dark {
-  background-color: #1b1a1a;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  height: 250vh;
-  max-height: 180vh;
-}
 
 .s-header-dark {
     font-family: 'Courier New', Courier, monospace;

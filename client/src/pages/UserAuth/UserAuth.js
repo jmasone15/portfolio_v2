@@ -12,7 +12,7 @@ import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 import "./userauth.css"
 
-export default function UserAuth({ theme, setCurrentPage }) {
+export default function UserAuth({ theme, setCurrentPage, setDraw }) {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -72,6 +72,7 @@ export default function UserAuth({ theme, setCurrentPage }) {
 
     useEffect(() => {
         setCurrentPage("skills");
+        setDraw(false);
     });
 
     return (

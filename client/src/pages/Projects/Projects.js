@@ -10,7 +10,7 @@ import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 import pageTransition from "../../utils/animations/pageTrans";
 
-export default function Projects({ theme, currentPage, setCurrentPage }) {
+export default function Projects({ theme, currentPage, setCurrentPage, setDraw }) {
 
     const lightBackgroundColors = [
         "#FFADAD",
@@ -42,7 +42,8 @@ export default function Projects({ theme, currentPage, setCurrentPage }) {
     useEffect(() => {
         setCurrentPage("project");
         pageTransition(screen, body);
-        projectFadeIn()
+        projectFadeIn();
+        setDraw(false);
     });
 
     const projectFadeIn = () => {
