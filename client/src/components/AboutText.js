@@ -8,6 +8,7 @@ export default function AboutText({ theme, changePage }) {
                 <h5>I am a Full Stack Developer with a passion for creating modern UI experiences.</h5>
                 <h5>With every project I work on, I bring <u>creative ideas</u>, effective <u>problem solving</u>, and a little <u>humor</u> to make things fun.</h5>
                 <h5>Whatever goals you may have, I am ready to make them a reality. :)</h5>
+                <h5><a download href="./Jordan Masone Resume.pdf" style={{ color: "inherit" }}><b><u>My Resume</u></b></a></h5>
             </div>
             <br />
             <div className={theme ? "text-div" : "text-div-dark"}>
