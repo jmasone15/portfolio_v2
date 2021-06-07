@@ -1,8 +1,13 @@
 import React from 'react';
-import Button from "react-bootstrap/Button";
 import Container from 'react-bootstrap/esm/Container';
 
 export default function ProjectCard({ color, data, num, theme }) {
+
+    const changePage = (e, link) => {
+        e.preventDefault();
+        window.location.replace(link)
+    };
+
     return (
         <Container>
             <div className="p-card">
@@ -20,15 +25,13 @@ export default function ProjectCard({ color, data, num, theme }) {
                         <p style={theme ? { color: "white", backgroundColor: "#8d99ae" } : { backgroundColor: "#bfc0c0" }}><b>{data.description}</b></p>
                         <br />
                         <button
-                            target="_blank"
-                            href={data.github}
+                            onClick={(e) => changePage(e, data.github)}
                             className={theme ? "p-btn p-btn-first" : "p-btn-dark p-btn-first-dark"}
                             style={{ backgroundColor: color, border: `2px solid ${color}` }}
                         >Github
                         </button>
                         <button
-                            target="_blank"
-                            href={data.deploy}
+                            onClick={(e) => changePage(e, data.deploy)}
                             className={theme ? "p-btn p-btn-first" : "p-btn-dark p-btn-first-dark"}
                             style={{ backgroundColor: color, border: `2px solid ${color}` }}
                         >Deployed

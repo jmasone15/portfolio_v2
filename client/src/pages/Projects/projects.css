@@ -47,10 +47,10 @@
 }
 
 .p-btn {
-      box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-color: transparent;
   border-radius: 0.6em;
   cursor: pointer;
@@ -63,6 +63,7 @@
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+  color: black;
 }
 
 .p-btn:hover, .p-btn:focus {
@@ -207,6 +208,7 @@ i {
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+  color: black;
 }
 
 .p-btn-dark:hover, .p-btn-dark:focus {

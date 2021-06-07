@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import Header from "../../components/Header";
 import Navs from "../../components/Navs";
 import Footer from "../../components/Footer";
@@ -11,7 +12,7 @@ import pageTransition from "../../utils/animations/pageTrans";
 
 export default function Home({ theme, currentPage, setCurrentPage, draw, setDraw }) {
 
-    //setInterval(show(id), time);
+    const history = useHistory();
 
     // For Page Transition
     let screen = useRef(null);
@@ -41,6 +42,11 @@ export default function Home({ theme, currentPage, setCurrentPage, draw, setDraw
         }
     }
 
+    const changePage = (e, link) => {
+        e.preventDefault();
+        history.push(link);
+    };
+
     return (
         <div className="unselectable">
             <div className="load-container">
@@ -57,7 +63,7 @@ export default function Home({ theme, currentPage, setCurrentPage, draw, setDraw
                     </Row>
                     <Row className="justify-content-md-center">
                         <div className="header">
-                            <Header theme={theme} draw={draw} setDraw={setDraw} />
+                            <Header theme={theme} draw={draw} setDraw={setDraw} changePage={changePage} />
                         </div>
                     </Row>
                 </Container>
