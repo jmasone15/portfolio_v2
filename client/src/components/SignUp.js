@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -49,7 +49,7 @@ export default function SignUp({ email, password, signUp, login, setEmail, setPa
                                             className={theme ? "login-btn first-login" : "login-btn-dark first-login-dark"}
                                             type="submit">
                                             Submit
-                                    </button>
+                                        </button>
                                     </div>
                                 </form>
                             </Card.Body>
@@ -97,7 +97,7 @@ export default function SignUp({ email, password, signUp, login, setEmail, setPa
                                             className={theme ? "login-btn first-login" : "login-btn-dark first-login-dark"}
                                             type="submit">
                                             Submit
-                                    </button>
+                                        </button>
                                     </div>
                                 </form>
                             </Card.Body>

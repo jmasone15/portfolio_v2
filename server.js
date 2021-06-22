@@ -38,4 +38,3 @@ app.use("/auth", require("./routes/userRoutes"));
 // app.get("*", function (req, res) {
 //     res.sendFile(path.join(__dirname, "./client/build/index.html"));
 // });
-// test

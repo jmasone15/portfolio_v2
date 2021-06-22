@@ -1,6 +1,5 @@
 import React from "react";
 import Typist from 'react-typist';
-import { Link } from "react-router-dom";
 
 export default function Header({ theme, draw, setDraw, changePage }) {
 
