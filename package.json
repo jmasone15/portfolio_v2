@@ -30,8 +30,7 @@
     "if-env": "^1.0.4",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.12",
-    "morgan": "^1.10.0",
-    "react-tsparticles": "^1.27.0"
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "concurrently": "^6.2.0"
