@@ -8,7 +8,7 @@ function AuthContextProvider(props) {
     const [loggedIn, setLoggedIn] = useState(undefined);
 
     async function getLoggedIn() {
-        const loggedInRes = await axios.get("/auth/loggedIn");
+        const loggedInRes = await axios.get("https://damp-savannah-74900.herokuapp.com/auth/loggedIn");
         setLoggedIn(loggedInRes.data);
     }
 

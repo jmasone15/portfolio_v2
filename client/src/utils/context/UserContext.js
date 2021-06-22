@@ -19,7 +19,7 @@ function UserContextProvider(props) {
     }
     async function getUserEmail() {
         if (userId !== "") {
-            const userData = await axios.get(`/auth/profile/${userId}`);
+            const userData = await axios.get(`https://damp-savannah-74900.herokuapp.com/auth/profile/${userId}`);
             setUserEmail(userData.data.email)
         }
     }

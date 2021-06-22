@@ -30,7 +30,7 @@ export default function UserAuth({ theme, setCurrentPage, setDraw }) {
                 password: password
             };
 
-            await axios.post("/auth/signup", signUpData);
+            await axios.post("https://damp-savannah-74900.herokuapp.com/auth/signup", signUpData);
             await getLoggedIn();
         } catch (err) {
             console.error(err);
@@ -47,7 +47,7 @@ export default function UserAuth({ theme, setCurrentPage, setDraw }) {
                 password: password
             };
 
-            await axios.post("/auth/login", signUpData);
+            await axios.post("https://damp-savannah-74900.herokuapp.com/auth/login", signUpData);
             await getLoggedIn();
         } catch (err) {
             console.error(err);
@@ -59,7 +59,7 @@ export default function UserAuth({ theme, setCurrentPage, setDraw }) {
         e.preventDefault();
         setEmail("");
         setPassword("");
-        await axios.get("/auth/logout");
+        await axios.get("https://damp-savannah-74900.herokuapp.com/auth/logout");
         await getLoggedIn();
     }
 
